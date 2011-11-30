@@ -19,6 +19,7 @@ class Car
     "USD"
   end
 end
+```
 
 So let's go ahead and store a price_in_cents for the car:
 
