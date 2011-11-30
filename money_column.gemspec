@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = '1.3.7'
   
   s.name    = 'money_column'
-  s.version = '0.2.0'
+  s.version = '0.2.1'
   s.date    = '2011-11-30'
   s.summary = 'A set of helper methods for working with money-based attributes.'
   s.description = 'A set of helper methods for working with money-based attributes.'
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   # Runtime Dependencies
   s.add_runtime_dependency('activesupport', '>= 2.3.14')
-  s.add_runtime_dependency('money', '~> 2.2.0')
+  s.add_runtime_dependency('money', '~> 4.0.1')
 
   # Development Dependencies
   s.add_development_dependency('rake', '~> 0.9.2')
