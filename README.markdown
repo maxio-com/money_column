@@ -1,8 +1,7 @@
-MoneyColumn
+MoneyColumn [![build status](https://secure.travis-ci.org/chargify/money_column.png)](http://travis-ci.org/chargify/money_column)
 ===========
 
 A set of helper methods for working with money-based database columns.
-
 
 ## How it works
 
