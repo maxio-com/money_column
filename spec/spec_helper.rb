@@ -1,16 +1,7 @@
 $:.unshift File.expand_path('../lib', File.dirname(__FILE__))
 
-require 'money_column'
 require 'rspec'
-
-# Establish connection with in memory SQLite 3 database
-# ActiveRecord::Base.send :establish_connection, :adapter => "sqlite3", :database => ":memory:"
-
-# Establish connection with in memory SQLite 3 database
-# ActiveRecord::Base.establish_connection :adapter => "sqlite3", :database => ":memory:"
-
-# Load database schema
-# load File.dirname(__FILE__) + "/schema.rb"
+require 'money_column'
 
 RSpec.configure do |config|
   config.filter_run :focused => true
@@ -18,3 +9,12 @@ RSpec.configure do |config|
   config.alias_example_to :fit, :focused => true
   config.color_enabled = true
 end
+
+ActiveRecord::Base.configurations = {'sqlite3' => {:adapter => 'sqlite3', :database => ':memory:'}}
+ActiveRecord::Base.establish_connection('sqlite3')
+
+ActiveRecord::Base.logger = Logger.new(STDERR)
+ActiveRecord::Base.logger.level = Logger::WARN
+
+# Load test database schema
+load File.dirname(__FILE__) + "/schema.rb"

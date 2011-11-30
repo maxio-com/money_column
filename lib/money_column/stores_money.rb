@@ -1,9 +1,9 @@
 module MoneyColumn
   module StoresMoney
-    def self.included(base)
-      base.extend(ClassMethods)
+    def self.included(klass)
+      klass.send(:extend, ClassMethods)
     end
-
+    
     module ClassMethods
       def stores_money(money_name, options = {})
         options.reverse_merge!({
@@ -39,3 +39,5 @@ module MoneyColumn
     end
   end
 end
+
+ActiveRecord::Base.send :include, MoneyColumn::StoresMoney

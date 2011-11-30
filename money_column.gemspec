@@ -17,10 +17,11 @@ Gem::Specification.new do |s|
   s.require_paths = %w[lib]
 
   # Runtime Dependencies
-  # s.add_runtime_dependency('activeresource', '>= 2.3.5')
+  s.add_runtime_dependency('activerecord', '>= 2.3.14')
   s.add_runtime_dependency('money', '~> 2.2.0')
 
   # Development Dependencies
+  s.add_development_dependency('sqlite3', '~> 1.3.4')
   s.add_development_dependency('rake', '~> 0.9.2')
   s.add_development_dependency('rspec', '~> 2.7.0')
   s.add_development_dependency('guard-rspec', '~> 0.5.0')
