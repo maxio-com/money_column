@@ -4,11 +4,11 @@ Gem::Specification.new do |s|
   s.rubygems_version = '1.3.7'
   
   s.name    = 'money_column'
-  s.version = '0.1.0'
+  s.version = '0.2.0'
   s.date    = '2011-11-30'
-  s.summary = 'A set of helper methods for working with money-based database columns.'
-  s.description = 'A set of helper methods for working with money-based database columns.'
-  s.authors = ["Michael Klett"]
+  s.summary = 'A set of helper methods for working with money-based attributes.'
+  s.description = 'A set of helper methods for working with money-based attributes.'
+  s.authors = ["Michael Klett", "Shay Frendt"]
   s.email = 'support@chargify.com'
   s.homepage = 'http://github.com/chargify/money_column'
   
@@ -17,11 +17,10 @@ Gem::Specification.new do |s|
   s.require_paths = %w[lib]
 
   # Runtime Dependencies
-  s.add_runtime_dependency('activerecord', '>= 2.3.14')
+  s.add_runtime_dependency('activesupport', '>= 2.3.14')
   s.add_runtime_dependency('money', '~> 2.2.0')
 
   # Development Dependencies
-  s.add_development_dependency('sqlite3', '~> 1.3.4')
   s.add_development_dependency('rake', '~> 0.9.2')
   s.add_development_dependency('rspec', '~> 2.7.0')
   s.add_development_dependency('guard-rspec', '~> 0.5.0')

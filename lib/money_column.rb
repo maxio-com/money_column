@@ -1,5 +1,6 @@
-require 'active_record'
+require 'rubygems'
 require 'money'
+require 'active_support'
 require 'money_column/stores_money'
 
 # FREEDOM PATCH - Since a money column might validly return nil, 

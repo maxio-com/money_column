@@ -7,13 +7,13 @@ module MoneyColumn
     module ClassMethods
       def stores_money(money_name, options = {})
         options.reverse_merge!({
-          :cents_column => "#{money_name}_in_cents",
+          :cents_attribute => "#{money_name}_in_cents",
           :allow_nil => true
         })
 
         class_eval <<-EOV
           def #{money_name}
-            cents = send('#{options[:cents_column]}')
+            cents = send('#{options[:cents_attribute]}')
 
             if !#{options[:allow_nil]}
               cents ||= 0
@@ -28,7 +28,7 @@ module MoneyColumn
           end
           
           def #{money_name}=(amount)
-            self.#{options[:cents_column]} = if amount.blank?
+            self.#{options[:cents_attribute]} = if amount.blank?
               nil
             else
               amount.to_money.cents
@@ -39,5 +39,3 @@ module MoneyColumn
     end
   end
 end
-
-ActiveRecord::Base.send :include, MoneyColumn::StoresMoney
