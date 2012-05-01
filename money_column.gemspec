@@ -1,14 +1,16 @@
+require File.expand_path('../lib/money_column/version', __FILE__)
+
 Gem::Specification.new do |s|
   s.specification_version = 3 if s.respond_to? :specification_version=
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.rubygems_version = '1.3.7'
   
   s.name    = 'money_column'
-  s.version = '0.2.1'
-  s.date    = '2011-11-30'
+  s.version = MoneyColumn::VERSION
+  s.date    = '2012-05-01'
   s.summary = 'A set of helper methods for working with money-based attributes.'
   s.description = 'A set of helper methods for working with money-based attributes.'
-  s.authors = ["Michael Klett", "Shay Frendt"]
+  s.authors = ["Michael Klett", "Shay Frendt", "Nathan Verni"]
   s.email = 'support@chargify.com'
   s.homepage = 'http://github.com/chargify/money_column'
   
