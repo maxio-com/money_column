@@ -1,7 +1,8 @@
 require 'rubygems'
 require 'money'
-require 'active_support'
+require 'active_support/core_ext/hash'
 require 'money_column/stores_money'
+require 'monetize'
 
 # FREEDOM PATCH - Since a money column might validly return nil, 
 # let's allow +format+ to be called on nil and just return nil as a string
