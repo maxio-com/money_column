@@ -22,7 +22,7 @@ module MoneyColumn
             if cents.blank?
               nil
             else
-              my_currency = self.respond_to?(:currency) ? currency : ::Money.default_currency
+              my_currency = self.respond_to?(:currency) && !self.currency.nil? ? currency : ::Money.default_currency
               Money.new(cents, my_currency)
             end
           end
