@@ -40,76 +40,77 @@ end
 
 describe "MoneyColumn" do
   describe "getter method" do
-    it "should return a money object based on the inferred cents_attribute" do
+    it "returns a money object based on the inferred cents_attribute" do
       car = Car.new
       car.price_in_cents = 1000
-      car.price.should == 10.to_money
+      expect(car.price).to eql(10.to_money)
     end
 
-    it "should return a money object based on the stated cents_attribute" do
+    it "returns a money object based on the stated cents_attribute" do
       car = CarWithSpecifiedAttribute.new
       car.amount_in_cents = 5000
-      car.price.should == 50.to_money
+      expect(car.price).to eql(50.to_money)
     end
   end
-  
+
   describe "setter method" do
-    it "should pass on money values" do
+    it "passes on money values" do
       car = Car.new
       car.price = 1.to_money
-      car.price.should == 1.to_money
-    end
-    
-    it "should convert string values to money objects" do
-      car = CarWithCurrency.new
-      car.price = '2'
-      car.price.should == 2.to_money
-    end
-    
-    it "should convert to money objects in the correct currency automatically" do
-      car = CarWithNonDefaultCurrency.new
-      car.price = '4'
-      car.price.should == Money.new(400, 'GBP')
+      expect(car.price).to eql(1.to_money)
     end
 
-    it "should convert numeric values to money objects" do
+    it "converts string values to money objects" do
+      car = CarWithCurrency.new
+      car.price = '2'
+      expect(car.price).to eql(2.to_money)
+    end
+
+    it "converts to money objects in the correct currency automatically" do
+      car = CarWithNonDefaultCurrency.new
+      car.price = '4'
+      expect(car.price).to eql(Money.new(400, 'GBP'))
+    end
+
+    it "converts numeric values to money objects" do
       car = Car.new
       car.price = 3
-      car.price.should == 3.to_money
+      expect(car.price).to eql(3.to_money)
     end
 
     describe "when nil is allowed" do
-      it "should treat blank values as nil" do
+      it "treats blank values as nil" do
         car = Car.new
         car.price = ''
-        car.price.should be_nil
-      end
-    end
-    
-    describe "when nil isn't allowed" do
-      it "should treat blank values as $0" do
-        car = CarNilNotAllowed.new
-        car.price = ''
-        car.price.should == Money.new(0, 'USD')
+        expect(car.price).to be_nil
       end
     end
 
-    it "should allow existing prices to be set to nil with a blank value" do
+    describe "when nil isn't allowed" do
+      it "treats blank values as $0" do
+        car = CarNilNotAllowed.new
+        car.price = ''
+        expect(car.price).to eql(Money.new(0, 'USD'))
+      end
+    end
+
+    it "allows existing prices to be set to nil with a blank value" do
       car = Car.new
       car.price = 500.to_money
-      car.price.should_not be_nil
+      expect(car.price).to_not be_nil
       car.price = ''
-      car.price.should be_nil
+      expect(car.price).to be_nil
     end
   end
-  
+
   describe "declaring a money field" do
-    it "should allow the field to be declared with a different cents field" do
+    it "allows the field to be declared with a different cents field" do
       car = CarWithSpecifiedAttribute.new
       car.price = 5.to_money
-      car.price.should == 5.to_money
-      car.amount_in_cents.should == 5.to_money.cents
+
+      expect(car.price).to eql(5.to_money)
+      expect(car.amount_in_cents).to eql(5.to_money.cents)
     end
   end
-  
+
 end
