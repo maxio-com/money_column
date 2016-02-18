@@ -19,12 +19,12 @@ Gem::Specification.new do |s|
   s.require_paths = %w[lib]
 
   # Runtime Dependencies
-  s.add_runtime_dependency('activesupport', '~> 3.2.19')
+  s.add_runtime_dependency('activesupport', '~> 4.0')
   s.add_runtime_dependency('money', '6.1.1')
   s.add_runtime_dependency('monetize', '0.3.0')
 
   # Development Dependencies
-  s.add_development_dependency('rake', '~> 10.3.2')
+  s.add_development_dependency('rake', '~> 10.5.0')
   s.add_development_dependency('rspec', '~> 3.0.0')
   s.add_development_dependency('guard-rspec', '~> 4.2.10')
   s.add_development_dependency('growl', '~> 1.0.3')
