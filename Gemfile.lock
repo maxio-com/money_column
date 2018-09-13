@@ -3,8 +3,8 @@ PATH
   specs:
     money_column (0.2.4)
       activesupport (~> 4.0)
-      monetize (= 0.3.0)
-      money (= 6.1.1)
+      monetize (~> 1.3)
+      money (~> 6.5)
 
 GEM
   remote: https://rubygems.org/
@@ -39,10 +39,10 @@ GEM
     lumberjack (1.0.9)
     method_source (0.8.2)
     minitest (4.7.5)
-    monetize (0.3.0)
-      money (~> 6.1.0.beta1)
-    money (6.1.1)
-      i18n (~> 0.6.4)
+    monetize (1.9.0)
+      money (~> 6.12)
+    money (6.12.0)
+      i18n (>= 0.6.4, < 1.1)
     multi_json (1.11.2)
     pry (0.10.0)
       coderay (~> 1.1.0)
@@ -77,11 +77,11 @@ DEPENDENCIES
   activesupport (~> 4.0.13)
   growl (~> 1.0.3)
   guard-rspec (~> 4.2.10)
-  monetize (= 0.3.0)
+  monetize (~> 1.3)
   money_column!
   rake (~> 10.5.0)
   rb-fsevent (~> 0.9.4)
   rspec (~> 3.0.0)
 
 BUNDLED WITH
-   1.11.2
+   1.16.1
