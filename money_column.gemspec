@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   # Runtime Dependencies
   s.add_runtime_dependency('activesupport', '~> 4.0')
-  s.add_runtime_dependency('money', '6.11.2')
+  s.add_runtime_dependency('money', '6.11.3')
   s.add_runtime_dependency('monetize', '1.8.0')
 
   # Development Dependencies
