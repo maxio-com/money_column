@@ -20,8 +20,8 @@ Gem::Specification.new do |s|
 
   # Runtime Dependencies
   s.add_runtime_dependency('activesupport', '~> 4.0')
-  s.add_runtime_dependency('money', '6.11.3')
-  s.add_runtime_dependency('monetize', '1.8.0')
+  s.add_runtime_dependency('money', '6.13.3')
+  s.add_runtime_dependency('monetize', '1.9.1')
 
   # Development Dependencies
   s.add_development_dependency('rake', '~> 10.5.0')

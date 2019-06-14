@@ -4,4 +4,3 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'activesupport', '~> 4.2'
-gem 'monetize', '1.8.0'
