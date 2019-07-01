@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = %w[lib]
 
   # Runtime Dependencies
-  s.add_runtime_dependency('activesupport')
+  s.add_runtime_dependency('activesupport', '< 6')
   s.add_runtime_dependency('money', '~> 6.5')
   s.add_runtime_dependency('monetize', '1.3.0')
 

@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     money_column (0.2.4)
-      activesupport
+      activesupport (< 6)
       monetize (= 1.3.0)
       money (~> 6.5)
 
