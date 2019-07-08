@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'money'
-require 'active_support/core_ext/hash'
 require 'money_column/stores_money'
 require 'monetize'
 

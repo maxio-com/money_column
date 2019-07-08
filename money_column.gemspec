@@ -19,9 +19,9 @@ Gem::Specification.new do |s|
   s.require_paths = %w[lib]
 
   # Runtime Dependencies
-  s.add_runtime_dependency('activesupport', '~> 4.0')
   s.add_runtime_dependency('money', '~> 6.5')
   s.add_runtime_dependency('monetize', '1.3.0')
+  s.add_runtime_dependency('i18n', '>= 0.7.0')
 
   # Development Dependencies
   s.add_development_dependency('rake', '~> 10.5.0')
