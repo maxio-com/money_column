@@ -2,9 +2,8 @@ PATH
   remote: .
   specs:
     money_column (0.2.4)
-      i18n (>= 0.7.0)
-      monetize (= 1.3.0)
-      money (~> 6.5)
+      monetize
+      money
 
 GEM
   remote: https://rubygems.org/
@@ -32,10 +31,10 @@ GEM
       rb-inotify (>= 0.9)
     lumberjack (1.0.9)
     method_source (0.8.2)
-    monetize (1.3.0)
-      money (~> 6.5.0)
-    money (6.5.1)
-      i18n (>= 0.6.4, <= 0.7.0)
+    monetize (1.9.2)
+      money (~> 6.12)
+    money (6.13.4)
+      i18n (>= 0.6.4, <= 2)
     pry (0.10.0)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -66,6 +65,7 @@ PLATFORMS
 DEPENDENCIES
   growl (~> 1.0.3)
   guard-rspec (~> 4.2.10)
+  i18n (>= 0.7.0)
   money_column!
   rake (~> 10.5.0)
   rb-fsevent (~> 0.9.4)

@@ -19,9 +19,8 @@ Gem::Specification.new do |s|
   s.require_paths = %w[lib]
 
   # Runtime Dependencies
-  s.add_runtime_dependency('money', '~> 6.5')
-  s.add_runtime_dependency('monetize', '1.3.0')
-  s.add_runtime_dependency('i18n', '>= 0.7.0')
+  s.add_runtime_dependency('money')
+  s.add_runtime_dependency('monetize')
 
   # Development Dependencies
   s.add_development_dependency('rake', '~> 10.5.0')
@@ -29,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency('guard-rspec', '~> 4.2.10')
   s.add_development_dependency('growl', '~> 1.0.3')
   s.add_development_dependency('rb-fsevent', '~> 0.9.4')
+  s.add_development_dependency('i18n', '>= 0.7.0')
 end
