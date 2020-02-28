@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('monetize')
 
   # Development Dependencies
-  s.add_development_dependency('rake', '~> 10.5.0')
+  s.add_development_dependency('rake', '~> 13.0.1')
   s.add_development_dependency('rspec', '~> 3.0.0')
   s.add_development_dependency('guard-rspec', '~> 4.2.10')
   s.add_development_dependency('growl', '~> 1.0.3')
